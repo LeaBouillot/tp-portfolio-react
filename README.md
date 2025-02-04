@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+TP: Intégration React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Objectif : Le but de ce TP est d’intégrer le template HTML vers React, en adoptant une approche par composant.
 
-Currently, two official plugins are available:
+Etapes de réalisation du projet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅Initialisation d'un nouveau projet React Vite, installation des packages, création d'un nouveau Repository GitHub.
+✅Insertion des données HTML, CSS et JS dans le projet React, gestion des erreurs et affichage de la page.
+✅Création des premiers composants "Footer.jsx", "Hero.jsx", "Navbar.jsx".
+✅Installation du React Router Dom, car je ne souhaite pas réaliser le portfolio en 'single page'. Je crée donc différentes vues pour chaque page : Home, About, Resume, Services, Portfolio et Contact.
+✅Affichage dynamique de la barre de navigation et utilisation de props pour marquer la page active.
+✅Ajout de Bootstrap dans ce projet REACT documentation de l'installation, ✅pour afficher correctement les barres de progression des skills et 🚧 le carousel de témoignage carousel de bootstrp.🚧
+✅Gestion de l'envoi d'email via le formulaire de contact.
+✅Pusher le projet sur GitHub
+Mise en production du projet sur Vercel
+Envoi des liens au formateur.
+Utilisation bootstrap sur un Projet REACT
 
-## Expanding the ESLint configuration
+Installation de bootstrap avec la commande: $pnpm install react-bootstrap bootstrap
+Ajout du CDN et Script Bootstrap
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+<!-- Script Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossorigin></script>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+  <script
+    src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
+    crossorigin></script>
+  
+  <script
+    src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
+    crossorigin></script>
+  
+  <script>var Alert = ReactBootstrap.Alert;</script>
+<!-- Fin du script Bootstrap -->
+Ajout des barres de progression de bootstrap
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
+export default function About() {
+    return (
+        <div className="progress">
+            <span className="skill">Photoshop <i className="val">55%</i></span>
+            <ProgressBar now={55} />
+        </div>
+    )
 }
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
