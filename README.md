@@ -9,7 +9,8 @@ Objectif : Le but de ce TP est d’intégrer le template HTML vers React, en ado
 - :white_check_mark:Création des premiers composants "Footer.jsx", "Hero.jsx", "Navbar.jsx".
 - :white_check_mark:Installation du React Router Dom, car je ne souhaite pas réaliser le portfolio en 'single page'. Je crée donc différentes vues pour chaque page : Home, About, Resume, Services, Portfolio et Contact.
 - :white_check_mark:Affichage dynamique de la barre de navigation et utilisation de props pour marquer la page active.
-- :white_check_mark:Ajout de Bootstrap dans ce projet REACT [documentation de l'installation](https://react-bootstrap.github.io/docs/getting-started/introduction), :white_check_mark:pour afficher correctement les barres de progression des skills et 🚧 le carousel de témoignage [carousel de bootstrp](https://react-bootstrap.github.io/docs/components/carousel/).🚧
+- :white_check_mark:Ajout de Bootstrap dans ce projet REACT [documentation de l'installation](https://react-bootstrap.github.io/docs/getting-started/introduction), 
+- :white_check_mark:pour afficher correctement les barres de progression des skills et le carousel de témoignage [carousel de bootstrp](https://react-bootstrap.github.io/docs/components/carousel/).
 - :white_check_mark:Gestion de l'envoi d'email via le formulaire de contact.
 - :white_check_mark:Pusher le projet sur GitHub
 - Mise en production du projet sur Vercel
